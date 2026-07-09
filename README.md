@@ -1,6 +1,6 @@
 # AI Capstone
 
-A capstone project exploring AI-assisted software development workflows and practices.
+A capstone project for building and documenting software with **AI-assisted development** workflows. This repository is the workspace for iterating on code, practices, and tooling with the help of AI coding agents.
 
 ## Tech Stack
 
@@ -8,6 +8,6 @@ A capstone project exploring AI-assisted software development workflows and prac
 - **Git** — version control
 - **GitHub** — remote repository hosting and collaboration
 
-## About This Repository
+## License
 
-This repository is set up for **AI-assisted development**. It serves as a workspace for building, iterating, and documenting a capstone project with the help of AI coding tools and agents.
+This project is licensed under the [MIT License](LICENSE).
