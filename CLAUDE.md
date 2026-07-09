@@ -25,6 +25,11 @@ Use [Conventional Commits](https://www.conventionalcommits.org/):
 
 Example: `feat: add user authentication endpoint`
 
+## Development Conventions
+
+- **Branch per change** — Create a dedicated branch for each feature, fix, or docs update (e.g. `feat/add-login`, `fix/handle-empty-input`). Open a pull request on GitHub to merge into `main`; avoid committing directly to `main` for non-trivial work.
+- **Environment configuration** — Store secrets and environment-specific values in `.env` (never commit this file). When adding a new variable, document its name and purpose in the README so others can configure the project locally.
+
 ## General Principles
 
 - Prefer clarity over cleverness.
