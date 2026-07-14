@@ -73,6 +73,13 @@ function showErrors(errors) {
   });
 }
 
+function focusFirstInvalid(errors) {
+  const firstInvalid = Object.keys(errors).find((name) => errors[name]);
+  if (firstInvalid && fields[firstInvalid]) {
+    fields[firstInvalid].focus();
+  }
+}
+
 function validateField(fieldName) {
   const errors = validateSettings(getSettingsFromForm());
   setFieldError(fieldName, errors[fieldName] || "");
@@ -106,6 +113,7 @@ form.addEventListener("submit", async (event) => {
     showErrors(errors);
     statusEl.textContent = "Please fix the highlighted fields.";
     statusEl.className = "form__status form__status--error";
+    focusFirstInvalid(errors);
     return;
   }
 
@@ -123,7 +131,9 @@ form.addEventListener("submit", async (event) => {
     const data = await response.json();
 
     if (!response.ok) {
-      showErrors(data.errors || {});
+      const serverErrors = data.errors || {};
+      showErrors(serverErrors);
+      focusFirstInvalid(serverErrors);
       statusEl.textContent = data.message || "Unable to save settings.";
       statusEl.className = "form__status form__status--error";
       return;
