@@ -30,8 +30,19 @@ Example: `feat: add user authentication endpoint`
 - **Branch per change** — Create a dedicated branch for each feature, fix, or docs update (e.g. `feat/add-login`, `fix/handle-empty-input`). Open a pull request on GitHub to merge into `main`; avoid committing directly to `main` for non-trivial work.
 - **Environment configuration** — Store secrets and environment-specific values in `.env` (never commit this file). When adding a new variable, document its name and purpose in the README so others can configure the project locally.
 
+
+
 ## General Principles
 
 - Prefer clarity over cleverness.
 - Test meaningful behavior when tests are in scope.
 - Do not commit secrets (e.g. `.env` files or API keys).
+
+
+
+## Project Rules
+
+1. Always validate required form fields before allowing submission.
+2. Write or update tests whenever form validation logic changes.
+3. Review AI-generated code for accessibility, edge cases, and correctness before committing.
+
