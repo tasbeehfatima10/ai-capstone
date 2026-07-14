@@ -1,0 +1,16 @@
+{
+  "name": "ai-capstone",
+  "version": "1.0.0",
+  "description": "AI Capstone settings demo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [],
+  "author": "Tasbeeh Fatima",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

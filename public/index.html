@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings | AI Capstone</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <header class="card__header">
+          <h1>Settings</h1>
+          <p>Update your profile and application preferences.</p>
+        </header>
+
+        <form id="settings-form" novalidate>
+          <div class="field">
+            <label for="displayName">Display name</label>
+            <input
+              id="displayName"
+              name="displayName"
+              type="text"
+              autocomplete="name"
+              required
+              minlength="2"
+              maxlength="50"
+              placeholder="Jane Doe"
+            />
+            <p class="field__error" id="displayName-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              placeholder="jane@example.com"
+            />
+            <p class="field__error" id="email-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="theme">Theme</label>
+            <select id="theme" name="theme" required>
+              <option value="">Select a theme</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+              <option value="system">System</option>
+            </select>
+            <p class="field__error" id="theme-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="language">Language</label>
+            <select id="language" name="language" required>
+              <option value="">Select a language</option>
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+              <option value="fr">French</option>
+            </select>
+            <p class="field__error" id="language-error" role="alert"></p>
+          </div>
+
+          <div class="field field--checkbox">
+            <label class="checkbox">
+              <input
+                id="emailNotifications"
+                name="emailNotifications"
+                type="checkbox"
+              />
+              <span>Send email notifications</span>
+            </label>
+            <p class="field__error" id="emailNotifications-error" role="alert"></p>
+          </div>
+
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+
+          <div class="form__actions">
+            <button type="reset" class="button button--secondary">Reset</button>
+            <button type="submit" class="button button--primary">Save settings</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="/settingsForm.js"></script>
+  </body>
+</html>
